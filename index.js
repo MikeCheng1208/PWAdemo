@@ -1,4 +1,12 @@
 var text = document.getElementById("text");
+var deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', function (e) {
+    deferredPrompt = e;
+    e.preventDefault();
+    console.log('beforeinstallprompt: ',deferredPrompt);
+});
+
 if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./ServiceWorker.js') // 註冊 Service Worker
     .then(function(reg) {
@@ -11,15 +19,11 @@ if('serviceWorker' in navigator) {
     });
 }
 
+
 function installOk(){
-    var deferredPrompt = null;
     var BodyInstall = document.getElementsByTagName("body")[0];
-
-    window.addEventListener('beforeinstallprompt', function (e) {
-        deferredPrompt = e;
-    });
-
     BodyInstall.addEventListener('click', function () {
+        console.log('click');
         if (deferredPrompt != null) {
             // 异步触发横幅显示
             deferredPrompt.prompt();
