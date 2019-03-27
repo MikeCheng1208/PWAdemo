@@ -16,8 +16,11 @@ if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(function() { console.log('Service Worker Registered'); });
 }
 let deferredPrompt;
+
 const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+window.onload = function() {
+    addBtn.style.display = 'none';
+}
 
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
