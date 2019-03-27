@@ -13,23 +13,17 @@ html, body{
     background-size: cover;
     background-position: center;
 }
-a{
-    cursor: pointer;
-    display: block;
-    background-color: deepskyblue;
-    font-size: 30px;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 50px 0;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    box-shadow: 0 0 10px rgba(0, 71, 95, 0.8);
-}
 p{
     color: red;
 }
 
 .add-button {
-    
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("./icon/fox-icon.png");
+    background-size: cover;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 71, 95, 0.8);
 }

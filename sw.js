@@ -12,6 +12,7 @@ self.addEventListener('install', function(e) {
         './img/chrome-48x48.png',
         './img/chrome-72x72.png',
         './img/chrome-96x96.png',
+        './icon/fox-icon.png'
       ]);
     })
   );
