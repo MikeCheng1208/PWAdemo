@@ -1,47 +1,45 @@
-console.log("laoding123");
+// const images = ['fox1','fox2','fox3','fox4'];
+// const imgElem = document.querySelector('img');
 
-// var text = document.getElementById("text");
-// var deferredPrompt = null;
-
-// window.addEventListener('beforeinstallprompt', function (e) {
-    // e.preventDefault();
-//     deferredPrompt = e;
-//     console.log('beforeinstallprompt: ',deferredPrompt);
-// });
-
-// if('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('./ServiceWorker.js') // 註冊 Service Worker
-//     .then(function(reg) {
-//         text.innerHTML = "註冊成功";
-//         installOk();
-//         console.log('註冊成功 Registration succeeded. Scope is ' + reg.scope); // 註冊成功
-//     }).catch(function(error) {
-//         text.innerHTML = "註冊失敗";
-//         console.log('註冊失敗 Registration failed with ' + error); // 註冊失敗
-//     });
+// function randomValueFromArray(array) {
+//   let randomNo =  Math.floor(Math.random() * array.length);
+//   return array[randomNo];
 // }
 
+// setInterval(function() {
+//   let randomChoice = randomValueFromArray(images);
+//   imgElem.src = 'images/' + randomChoice + '.jpg';
+// }, 2000)
 
-// function installOk(){
-//     var BodyInstall = document.getElementsByTagName("body")[0];
-//     BodyInstall.addEventListener('click', function () {
-//         console.log('click');
-//         if (deferredPrompt != null) {
-//             // 异步触发横幅显示
-//             deferredPrompt.prompt();
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/pwa-examples/a2hs/sw.js').then(function() { console.log('Service Worker Registered'); });
+}
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
 
-//             deferredPrompt.userChoice.then(function (choiceResult) {
-//                 if (choiceResult.outcome === 'dismissed') {
-//                     text.innerHTML = "用户取消安装应用";
-//                 } else {
-//                     text.innerHTML = "用户安装了应用";
-//                 }
-//             });
-            
-//             deferredPrompt = null;
-//         }
-//     });
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI to notify the user they can add to home screen
+    addBtn.style.display = 'block';
 
-
-
-// }
+    addBtn.addEventListener('click', (e) => {
+        // hide our user interface that shows our A2HS button
+        addBtn.style.display = 'none';
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+            } else {
+                console.log('User dismissed the A2HS prompt');
+            }
+            deferredPrompt = null;
+        });
+    });
+});

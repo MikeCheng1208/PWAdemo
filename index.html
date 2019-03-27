@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PWA Test</title>
-
-    <link rel="manifest" href="./manifest.json">
+    <!-- Adress bar styling -->
+    <meta name="theme-color" content="#FFD700">
+    <meta name="msapplication-navbutton-color" content="#FFD700">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <script src="./index.js?123"></script>
+    <link rel="manifest" href="manifest.webmanifest">
 </head>
 <style>
     *{
@@ -44,6 +50,6 @@
 </style>
 <body>
     <p id="text"></p>
-    <script src="./index.js?123"></script>
+    <button class="add-button">Add to home screen</button>
 </body>
 </html>
