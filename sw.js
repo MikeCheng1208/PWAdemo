@@ -4,7 +4,6 @@ self.addEventListener('install', function(e) {
       return cache.addAll([
         './index.html',
         './bg.jpeg',
-        './img',
         './utils.js',
         './index.js',
         './img/chrome-144x144.png',
