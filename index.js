@@ -1,4 +1,4 @@
-console.log("laoding");
+console.log("laoding123");
 
 // var text = document.getElementById("text");
 // var deferredPrompt = null;
