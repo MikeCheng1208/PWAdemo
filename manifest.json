@@ -1,43 +1,29 @@
 {
-    "name": "宝宝树移动站",
-    "short_name": "宝宝树孕育",
-    "description": "宝宝树是全球最专业的育儿社交互助平台，这里有育儿专家在线为您解答育儿难题，有无数父母在这里交流育儿心得和育儿经验，互帮互助，学习育儿知识 和育儿经验。",
+    "dir": "ltr",
+    "lang": "en",
+    "name": "D.D Blog",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "/",
+    "short_name": "D.D Blog",
+    "theme_color": "transparent",
+    "description": "Share More, Gain More. - D.D Blog",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "./img/chrome-36x36.png",
             "sizes": "36x36",
             "type": "image/png"
-        },
+        }, 
         {
             "src": "./img/chrome-48x48.png",
             "sizes": "48x48",
             "type": "image/png"
-        },
-        {
-            "src": "./img/chrome-72x72.png",
-            "sizes": "72x72",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/chrome-96x96.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/chrome-144x144.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
+        } 
     ],
-    "theme_color": "#fff",
-    "background_color": "#fff",
-    "prefer_related_applications": false,
-    "start_url": "./index.html",
-    "display": "standalone",
-    "orientation": "portrait"
-}
+    "gcm_sender_id": "...",
+    "applicationServerKey": "..."
+  }
