@@ -2,11 +2,11 @@ var cacheName = 'weatherPWA-step1';
 console.log('cacheName:', cacheName);
 var filesToCache = [  
     '/',  
-    './index.html',  
-    './bg.jpeg',
-    './index.js',
-    './utils.js',
-    './Icon-App-76x76@1x.png',
+    '/index.html',  
+    '/bg.jpeg',
+    '/index.js',
+    '/utils.js',
+    '/Icon-App-76x76@1x.png',
 ];
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
