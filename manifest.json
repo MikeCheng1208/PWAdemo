@@ -4,7 +4,8 @@
     "icon": [
         {
             "src": "./ios/AppIconappiconset/Icon-App-76x76@1x.png",
-            "sizes": "76x76"
+            "sizes": "76x76",
+            "type": "image/png"
         }
     ],
     "start_url": "index.html",
