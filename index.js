@@ -10,7 +10,7 @@
 //   let randomChoice = randomValueFromArray(images);
 //   imgElem.src = 'images/' + randomChoice + '.jpg';
 // }, 2000)
-console.log("456");
+console.log("789");
 
 // Register service worker to control making site work offline
 if('serviceWorker' in navigator) {
