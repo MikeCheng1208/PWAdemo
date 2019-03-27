@@ -1,3 +1,5 @@
+console.log("laoding");
+
 // var text = document.getElementById("text");
 // var deferredPrompt = null;
 
