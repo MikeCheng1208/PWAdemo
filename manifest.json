@@ -1,0 +1,14 @@
+{
+    "short_name": "鸿运",
+    "name": "鸿运彩票 ｜ 让梦想更进一步",
+    "icon": [
+        {
+            "src": "./ios/AppIconappiconset/Icon-App-76x76@1x.png",
+            "sizes": "76x76"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#2196f3",
+    "theme_color": "blue",
+    "display": "standalone"
+}
