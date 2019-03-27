@@ -1,4 +1,4 @@
-console.log("abc");
+console.log("abc123");
 if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(function() { console.log('Service Worker Registered'); });
 }
