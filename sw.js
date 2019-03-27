@@ -2,10 +2,10 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('video-store').then(function(cache) {
       return cache.addAll([
+        './index.js',
         './index.html',
         './bg.jpeg',
-        './utils.js',
-        './index.js',
+        './index.css',
         './img/chrome-144x144.png',
         './img/chrome-192x192.png',
         './img/chrome-36x36.png',
