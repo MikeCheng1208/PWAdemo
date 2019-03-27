@@ -11,7 +11,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    <script src="./index.js?123"></script>
     <link rel="manifest" href="manifest.webmanifest">
 </head>
 <style>
@@ -20,6 +19,7 @@
         margin: 0;
         box-sizing: border-box;
     }
+
     html, body{
         width: 100%;
         height: 100%;
@@ -47,9 +47,15 @@
         color: red;
     }
 
+    .add-button {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+    }
 </style>
 <body>
     <p id="text"></p>
     <button class="add-button">Add to home screen</button>
+    <script src="./index.js?123"></script>
 </body>
 </html>
